@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>KMP Text Search</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>KMP Text Search</h1>
+
+        <p class="subtitle">
+            High-Performance Text Pattern Search
+            Using the Knuth-Morris-Pratt Algorithm
+        </p>
+
+
+        <div class="card">
+
+            <label>Enter Text</label>
+
+            <textarea
+                id="text"
+                placeholder="Enter your text here..."
+            ></textarea>
+
+
+            <label>Enter Pattern</label>
+
+            <input
+                type="text"
+                id="pattern"
+                placeholder="Enter pattern to search..."
+            >
+
+
+            <div class="buttons">
+
+                <button onclick="searchPattern()">
+                    Search Pattern
+                </button>
+
+                <button
+                    class="clear"
+                    onclick="clearAll()">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="card"
+            id="results"
+            style="display:none;"
+        >
+
+            <h2>Search Results</h2>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span>Occurrences</span>
+
+                    <strong id="occurrences">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>Execution Time</span>
+
+                    <strong id="time">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>Text Length</span>
+
+                    <strong id="textLength">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>Pattern Length</span>
+
+                    <strong id="patternLength">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <h3>Match Positions</h3>
+
+            <div
+                class="output"
+                id="positions">
+            </div>
+
+
+            <h3>LPS Array</h3>
+
+            <div
+                class="output"
+                id="lps">
+            </div>
+
+
+            <div class="complexity">
+
+                <p>
+                    <b>Time Complexity:</b>
+                    O(n + m)
+                </p>
+
+                <p>
+                    <b>Space Complexity:</b>
+                    O(m)
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
